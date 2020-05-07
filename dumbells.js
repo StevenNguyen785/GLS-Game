@@ -1,4 +1,4 @@
-class dumbells {
+class Dumbell {
 
   constructor() {
     this.r = 100;

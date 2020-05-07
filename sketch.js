@@ -1,4 +1,4 @@
-//let davegame;
+
 let uImg;
 let tImg;
 let bImg;
@@ -23,7 +23,7 @@ function keyPressed() {
 
 function draw() {
   if (random(1) < 0.01) {
-    dumbells.push(new dumbells());
+    dumbells.push(new Dumbell());
   }
 
   background(bImg);
@@ -34,3 +34,4 @@ function draw() {
     d.move();
     d.show();
   }
+}
