@@ -7,11 +7,11 @@ let dumbells = [];
 function preload() {
   uImg = loadImage('davegame.png');
   tImg = loadImage('dumbells.png');
-  bImg = loadImage('gamemodbackground.jpg');
+  bImg = loadImage('cartoongym.jpg');
 }
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(1000, 800);
   davegame = new davegame();
 }
 
@@ -22,16 +22,23 @@ function keyPressed() {
 }
 
 function draw() {
-  if (random(1) < 0.01) {
-    dumbells.push(new Dumbell());
+  if (random(1) < 0.005) {
+    dumbells.push(new dumbell());
+    //collideRectRect(200,200,100,150,mouseX,mouseY,50,75);
   }
 
   background(bImg);
-  davegame.show();
-  davegame.move();
-
   for (let d of dumbells) {
     d.move();
     d.show();
+    if(davegame.hits(d)) {
+      console.log('game over');
+      noLoop();
+    }
   }
+
+  davegame.show();
+  davegame.move();
+
+
 }

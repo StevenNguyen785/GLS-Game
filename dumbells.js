@@ -1,4 +1,4 @@
-class Dumbell {
+class dumbell {
 
   constructor() {
     this.r = 100;
@@ -7,7 +7,7 @@ class Dumbell {
   }
 
   move() {
-    this.x -= 3;
+    this.x -= 16;
   }
 
   show() {

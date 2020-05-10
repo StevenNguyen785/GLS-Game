@@ -4,12 +4,17 @@ class davegame {
     this.x = 50;
     this.y = height - this.r;
     this.vy = 0;
-    this.gravity = 2;
+    this.gravity = 3;
   }
 
   jump() {
-    this.vy = -25;
+    if(this.y == height - this.r)
+      this.vy = -35;
   }
+
+hits(dumbell) {
+  return collideRectRect(this.x,this.y,this.r,this.r,train.x,train.y,train.r,train.r);
+}
 
   move() {
     this.y += this.vy;
