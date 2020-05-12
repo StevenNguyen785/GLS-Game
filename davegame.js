@@ -1,6 +1,6 @@
 class davegame {
   constructor() {
-    this.r = 500;
+    this.r = 275;
     this.x = 50;
     this.y = height - this.r;
     this.vy = 0;
@@ -14,10 +14,10 @@ class davegame {
 
 hits(dumbell) {
 
-  let x1 = this.x + this.r * 0.5;
-  let y1 = this.y + this.r * 0.5;
-  let x2 = dumbell.x + dumbell.r * 0.5;
-  let y2 = dumbell.y + dumbell.r * 0.5;
+  let x1 = this.x + this.r * 0.325;
+  let y1 = this.y + this.r * 0.325;
+  let x2 = dumbell.x + dumbell.r * 0.325;
+  let y2 = dumbell.y + dumbell.r * 0.325;
 
   return collideCircleCircle(x1,y1,this.r,x2,y2,dumbell.r);
 }

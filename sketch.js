@@ -19,7 +19,7 @@ function preload() {
 // }
 
 function setup() {
-  createCanvas(1000, 800);
+  createCanvas(800, 600);
   davegame = new davegame();
   soundClassifier.classify(gotCommand);
 }
